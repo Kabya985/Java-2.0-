@@ -1,0 +1,24 @@
+public class MatrixDiagonalSum {
+    public static void main(String[] args) {
+        // Define a square matrix (for example 3x3)
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        // Get the size of the matrix (assuming it's a square matrix)
+        int n = matrix.length;
+
+        // Calculate the sum of the main diagonal and secondary diagonal
+        int mainDiagonalSum = 0, secondaryDiagonalSum = 0;
+        for (int i = 0; i < n; i++) {
+            mainDiagonalSum += matrix[i][i]; // Main diagonal elements
+            secondaryDiagonalSum += matrix[i][n - i - 1]; // Secondary diagonal elements
+        }
+
+        // Output the results
+        System.out.println("Sum of the main diagonal: " + mainDiagonalSum);
+        System.out.println("Sum of the secondary diagonal: " + secondaryDiagonalSum);
+    }
+}
